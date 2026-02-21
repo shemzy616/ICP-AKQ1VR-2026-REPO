@@ -1,11 +1,22 @@
 import mongoose,{Schema,Document}from "mongoose";
 
+interface ICustomField {
+    key: string;
+    value: string;
+}
+
 export interface IJobApplication extends Document{
     company:string;
     position:string;
     status:string;
     notes?:string;
     location?:string;
+    cvVersion?:string;
+    coverLetterVersion?:string;
+    cvDocumentId?:mongoose.Types.ObjectId;
+    coverLetterDocumentId?:mongoose.Types.ObjectId;
+    cvFileName?:string;
+    coverLetterFileName?:string;
     userId:string;
     description?:string;
     columnId:mongoose.Types.ObjectId;
@@ -14,7 +25,8 @@ export interface IJobApplication extends Document{
     jobUrl?:string;
     appliedDate?:Date;
     tags?:string[];
-    salary?:number;
+    salary?:string;
+    customFields?:ICustomField[];
     createdAt:Date;
     updatedAt:Date;
 }
@@ -39,6 +51,30 @@ const JobApplicationSchema = new Schema<IJobApplication>(
     },
     location:{
         type:String,
+    },
+    cvVersion:{
+        type:String,
+        trim:true,
+    },
+    coverLetterVersion:{
+        type:String,
+        trim:true,
+    },
+    cvDocumentId:{
+        type:Schema.Types.ObjectId,
+        ref:'JobApplicationDocument',
+    },
+    coverLetterDocumentId:{
+        type:Schema.Types.ObjectId,
+        ref:'JobApplicationDocument',
+    },
+    cvFileName:{
+        type:String,
+        trim:true,
+    },
+    coverLetterFileName:{
+        type:String,
+        trim:true,
     },
     userId:{
         index:true,
@@ -76,8 +112,18 @@ const JobApplicationSchema = new Schema<IJobApplication>(
         type:String,
     }],
     salary:{
-        type:Number,
+        type:String,
     },
+    customFields:[{
+        key:{
+            type:String,
+            trim:true,
+        },
+        value:{
+            type:String,
+            trim:true,
+        },
+    }],
     },
 {
         timestamps:true,

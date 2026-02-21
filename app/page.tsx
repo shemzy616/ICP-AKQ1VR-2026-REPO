@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { Suspense } from 'react';
 import { motion } from 'framer-motion';
 import { 
   SquareArrowRight, 
@@ -153,7 +154,9 @@ export default function Home() {
       </main>
 
       {/* FOOTER */}
-      <Footer />
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }

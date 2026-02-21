@@ -46,6 +46,14 @@ export default function Navbar() {
                   Dashboard
                 </Button>
               </Link>
+              <Link href="/Dashboard/stats">
+                <Button
+                  variant="ghost"
+                  className="text-sm font-medium text-zinc-600 hover:bg-zinc-100 hover:text-black"
+                >
+                  Stats
+                </Button>
+              </Link>
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
                   <Button variant="ghost" className="relative h-8 w-8 rounded-full">
