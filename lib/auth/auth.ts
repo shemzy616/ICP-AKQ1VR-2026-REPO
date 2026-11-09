@@ -1,62 +1,59 @@
-import { betterAuth } from "better-auth";
-import { mongodbAdapter } from "better-auth/adapters/mongodb";
-import { MongoClient } from "mongodb";
-import { headers } from "next/headers";
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import initializeUserBoard from "../innit-user-board";
+import { storage, StoredUser, StoredSession } from "@/lib/storage";
 
-// Use a global variable to prevent multiple connections in development
-const client = new MongoClient(process.env.MONGODB_URI!);
-const db = client.db();
+export const SESSION_COOKIE_NAME = "job_tracker_session";
 
-export const auth = betterAuth({
-    // baseURL is required to avoid redirect_uri_mismatch errors
-    baseURL: process.env.BETTER_AUTH_URL, 
-    
-    database: mongodbAdapter(db, {
-        client,
-    }),
-
-    socialProviders: {
-        google: { 
-            // Better Auth uses these to construct the OAuth callback URL
-            clientId: process.env.GOOGLE_CLIENT_ID as string, 
-            clientSecret: process.env.GOOGLE_CLIENT_SECRET as string,
-            // Ensures users can choose a different account if they have multiple
-            prompt: "select_account", 
-        }, 
-    },
-    emailAndPassword: {
-        enabled: true,
-    },
-    databaseHooks: {
-        user: {
-            create: {
-                after: async (user) => {
-                    if (user) {
-                        await initializeUserBoard(user.id);
-                    }
-                },
-            },
-        },
-    },
-});
-export async function getSession() {
-    const result = await auth.api.getSession(
-        {
-            headers: await headers()
-        }
-    );
-    return result;
+export interface SessionData {
+  user: {
+    id: string;
+    email: string;
+    name: string;
+  };
+  session: {
+    id: string;
+    userId: string;
+    expiresAt: string;
+  };
 }
-export async function signOut() {
-    const result = await auth.api.signOut(
-        {
-            headers: await headers()
-        }
-    );
 
-    if (result.success){
-        redirect("/sign-in");
+export async function getSession(): Promise<SessionData | null> {
+  try {
+    const cookieStore = await cookies();
+    const token = cookieStore.get(SESSION_COOKIE_NAME)?.value;
+    if (!token) return null;
+
+    const result = storage.getSessionByToken(token);
+    if (!result) return null;
+
+    return {
+      user: {
+        id: result.user.id,
+        email: result.user.email,
+        name: result.user.name,
+      },
+      session: {
+        id: result.session.id,
+        userId: result.session.userId,
+        expiresAt: result.session.expiresAt,
+      },
+    };
+  } catch (error) {
+    console.error("Error retrieving session:", error);
+    return null;
+  }
+}
+
+export async function signOut() {
+  try {
+    const cookieStore = await cookies();
+    const token = cookieStore.get(SESSION_COOKIE_NAME)?.value;
+    if (token) {
+      storage.deleteSession(token);
+      cookieStore.delete(SESSION_COOKIE_NAME);
     }
+  } catch (error) {
+    console.error("Error signing out:", error);
+  }
+  redirect("/sign-in");
 }

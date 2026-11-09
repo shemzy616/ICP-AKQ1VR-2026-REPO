@@ -1,0 +1,395 @@
+{
+  "version": "1.0.0",
+  "name": "Zero-Cost Open-Source Resume Skills & X-Y-Z Bullet Bank",
+  "sources": [
+    "https://github.com/zauberware/skill-set-json",
+    "https://github.com/thibaudcolas/fullresume",
+    "https://github.com/possumbility/bullet-points-for-resumes",
+    "Google XYZ Resume Achievement Formula"
+  ],
+  "actionVerbs": {
+    "engineering": ["Architected", "Engineered", "Refactored", "Automated", "Optimized", "Migrated", "Implemented", "Containerized", "Deployed", "Configured", "Standardized", "Benchmarked"],
+    "performance": ["Accelerated", "Streamlined", "Boosted", "Slashed", "Scaled", "Maximized", "Reduced", "Decoupled", "Eliminated"],
+    "leadership": ["Spearheaded", "Directed", "Orchestrated", "Pioneered", "Championed", "Mentored", "Aligned", "Empowered"],
+    "delivery": ["Delivered", "Shipped", "Launched", "Integrated", "Executed", "Resolved", "Authored", "Collaborated"]
+  },
+  "skills": [
+    {
+      "id": "react",
+      "name": "React",
+      "category": "Frontend",
+      "aliases": ["react", "reactjs", "react.js", "react 18", "react 19"],
+      "actionVerbs": ["Architected", "Engineered", "Refactored", "Optimized"],
+      "bulletTemplates": [
+        "Architected modular, accessible UI components in React with custom hooks, reducing duplicate code by 35% and accelerating feature delivery across sprint teams.",
+        "Refactored state management to React Context and lightweight state stores, improving initial render speed by 40% and eliminating unnecessary re-renders."
+      ]
+    },
+    {
+      "id": "nextjs",
+      "name": "Next.js",
+      "category": "Frontend",
+      "aliases": ["nextjs", "next.js", "next 14", "next 15", "turbopack", "app router"],
+      "actionVerbs": ["Migrated", "Engineered", "Optimized", "Shipped"],
+      "bulletTemplates": [
+        "Migrated legacy SPA to Next.js App Router with Server-Side Rendering (SSR) and edge caching, improving Core Web Vitals and boosting SEO rankings by 50%.",
+        "Engineered full-stack features using Next.js Server Actions and Route Handlers, reducing client bundle size by 30% and speeding up p95 page loads."
+      ]
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "category": "Languages",
+      "aliases": ["typescript", "ts"],
+      "actionVerbs": ["Standardized", "Refactored", "Implemented"],
+      "bulletTemplates": [
+        "Standardized strict TypeScript type definitions across the monorepo, decreasing runtime production errors and bug ticket volume by 45%.",
+        "Refactored untyped JavaScript codebase to strict TypeScript, enabling early compile-time bug detection and improving developer onboarding velocity."
+      ]
+    },
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "category": "Languages",
+      "aliases": ["javascript", "js", "es6", "es6+", "ecmascript"],
+      "actionVerbs": ["Developed", "Optimized", "Refactored"],
+      "bulletTemplates": [
+        "Developed high-throughput, event-driven asynchronous JavaScript workflows, maintaining responsive 60fps UI performance under intensive user data loads."
+      ]
+    },
+    {
+      "id": "tailwind",
+      "name": "Tailwind CSS",
+      "category": "Frontend",
+      "aliases": ["tailwind", "tailwindcss", "tailwind-css"],
+      "actionVerbs": ["Standardized", "Engineered", "Streamlined"],
+      "bulletTemplates": [
+        "Standardized responsive design system using Tailwind CSS and Radix UI primitives, ensuring WCAG 2.1 AA accessibility compliance and cutting design iteration cycles in half."
+      ]
+    },
+    {
+      "id": "vue",
+      "name": "Vue.js",
+      "category": "Frontend",
+      "aliases": ["vue", "vuejs", "vue.js", "vue 3", "nuxt", "nuxtjs"],
+      "actionVerbs": ["Engineered", "Refactored", "Built"],
+      "bulletTemplates": [
+        "Built dynamic enterprise dashboards in Vue 3 and Pinia, improving data update responsiveness for 20,000+ active users."
+      ]
+    },
+    {
+      "id": "angular",
+      "name": "Angular",
+      "category": "Frontend",
+      "aliases": ["angular", "angularjs", "angular 17", "rxjs"],
+      "actionVerbs": ["Engineered", "Modernized", "Developed"],
+      "bulletTemplates": [
+        "Modernized enterprise Angular application architecture using standalone components and RxJS reactive pipelines, reducing memory leaks by 30%."
+      ]
+    },
+    {
+      "id": "redux",
+      "name": "Redux / State Management",
+      "category": "Frontend",
+      "aliases": ["redux", "redux toolkit", "rtk", "zustand", "mobx"],
+      "actionVerbs": ["Centralized", "Refactored", "Optimized"],
+      "bulletTemplates": [
+        "Centralized global client state using Redux Toolkit (RTK Query), eliminating redundant API requests and decreasing network payload overhead by 40%."
+      ]
+    },
+    {
+      "id": "html_css",
+      "name": "HTML5 / CSS3",
+      "category": "Frontend",
+      "aliases": ["html", "html5", "css", "css3", "sass", "scss"],
+      "actionVerbs": ["Developed", "Engineered", "Designed"],
+      "bulletTemplates": [
+        "Engineered accessible, pixel-perfect layouts using semantic HTML5 and modern CSS Grid/Flexbox, passing cross-browser compatibility standards with 100% test coverage."
+      ]
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "category": "Backend",
+      "aliases": ["nodejs", "node.js", "node"],
+      "actionVerbs": ["Architected", "Engineered", "Scaled", "Optimized"],
+      "bulletTemplates": [
+        "Architected scalable Node.js microservices handling 10,000+ RPM with non-blocking I/O event loops, keeping p99 response times under 120ms.",
+        "Engineered secure RESTful and WebSocket backends using Node.js, establishing automated unit testing with 90%+ branch coverage."
+      ]
+    },
+    {
+      "id": "express",
+      "name": "Express.js",
+      "category": "Backend",
+      "aliases": ["express", "expressjs", "express.js"],
+      "actionVerbs": ["Developed", "Secured", "Refactored"],
+      "bulletTemplates": [
+        "Built and secured production REST API gateways with Express.js, integrating JWT authentication, rate limiting, and structured request logging."
+      ]
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "Languages",
+      "aliases": ["python", "python3", "py"],
+      "actionVerbs": ["Developed", "Automated", "Engineered", "Optimized"],
+      "bulletTemplates": [
+        "Developed automated Python ETL processing pipelines, cutting manual report generation time from 8 hours per week to 10 minutes.",
+        "Engineered high-performance backend microservices in Python, executing concurrent data processing tasks with multithreading and asyncio."
+      ]
+    },
+    {
+      "id": "django",
+      "name": "Django",
+      "category": "Backend",
+      "aliases": ["django", "django rest framework", "drf"],
+      "actionVerbs": ["Architected", "Implemented", "Scaled"],
+      "bulletTemplates": [
+        "Architected scalable web applications using Django and Django REST Framework with role-based access control (RBAC), securing sensitive client data."
+      ]
+    },
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "category": "Backend",
+      "aliases": ["fastapi", "fast-api"],
+      "actionVerbs": ["Engineered", "Deployed", "Built"],
+      "bulletTemplates": [
+        "Engineered asynchronous microservices using FastAPI and Pydantic validation, achieving 3x higher throughput compared to legacy synchronous frameworks."
+      ]
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "category": "Languages",
+      "aliases": ["java", "java 17", "java 21", "jvm"],
+      "actionVerbs": ["Engineered", "Refactored", "Maintained"],
+      "bulletTemplates": [
+        "Engineered enterprise-grade distributed services in Java utilizing multithreading and modern OOP principles, servicing mission-critical banking transactions."
+      ]
+    },
+    {
+      "id": "spring_boot",
+      "name": "Spring Boot",
+      "category": "Backend",
+      "aliases": ["spring boot", "springboot", "spring framework", "spring cloud"],
+      "actionVerbs": ["Architected", "Scaled", "Modernized"],
+      "bulletTemplates": [
+        "Architected enterprise cloud-native services in Spring Boot with Hibernate ORM, reducing database query bottlenecks and ensuring 99.99% service availability."
+      ]
+    },
+    {
+      "id": "golang",
+      "name": "Go (Golang)",
+      "category": "Languages",
+      "aliases": ["go", "golang"],
+      "actionVerbs": ["Engineered", "Optimized", "Scaled"],
+      "bulletTemplates": [
+        "Engineered concurrent high-throughput microservices in Go using goroutines and channels, achieving sub-10ms response times for financial data streaming."
+      ]
+    },
+    {
+      "id": "csharp",
+      "name": "C# / .NET",
+      "category": "Languages",
+      "aliases": ["c#", "csharp", ".net", ".net core", "asp.net"],
+      "actionVerbs": ["Developed", "Refactored", "Architected"],
+      "bulletTemplates": [
+        "Developed cross-platform REST services using C# and .NET Core, reducing server infrastructure hosting costs by 25%."
+      ]
+    },
+    {
+      "id": "sql",
+      "name": "SQL & Query Optimization",
+      "category": "Database",
+      "aliases": ["sql", "rdbms", "relational database", "query optimization"],
+      "actionVerbs": ["Optimized", "Refactored", "Benchmarked"],
+      "bulletTemplates": [
+        "Optimized complex SQL joins and introduced targeted indexing, reducing heavy analytical reporting query execution time from 45 seconds to 1.8 seconds."
+      ]
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "category": "Database",
+      "aliases": ["postgres", "postgresql", "psql"],
+      "actionVerbs": ["Architected", "Migrated", "Optimized"],
+      "bulletTemplates": [
+        "Architected scalable relational schemas in PostgreSQL with automated migration scripts, ensuring zero-downtime database upgrades during peak usage."
+      ]
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB / NoSQL",
+      "category": "Database",
+      "aliases": ["mongodb", "mongo", "nosql", "documentdb"],
+      "actionVerbs": ["Designed", "Scaled", "Indexed"],
+      "bulletTemplates": [
+        "Designed schema-flexible MongoDB document collections with compound indexes, supporting rapid querying of 5M+ polymorphic records."
+      ]
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "category": "Database",
+      "aliases": ["redis", "in-memory cache", "caching"],
+      "actionVerbs": ["Implemented", "Accelerated", "Integrated"],
+      "bulletTemplates": [
+        "Implemented Redis distributed caching layer for hot session data and query results, slashing origin database load by 60%."
+      ]
+    },
+    {
+      "id": "docker",
+      "name": "Docker & Containerization",
+      "category": "Cloud & DevOps",
+      "aliases": ["docker", "docker compose", "containerization", "containers"],
+      "actionVerbs": ["Containerized", "Standardized", "Automated"],
+      "bulletTemplates": [
+        "Containerized multi-tier microservices using Docker and multi-stage builds, shrinking image sizes by 65% and reducing developer onboarding from 2 days to 15 minutes.",
+        "Standardized development environments with Docker Compose, eliminating 'works on my machine' defects across distributed engineering teams."
+      ]
+    },
+    {
+      "id": "kubernetes",
+      "name": "Kubernetes",
+      "category": "Cloud & DevOps",
+      "aliases": ["kubernetes", "k8s", "helm"],
+      "actionVerbs": ["Orchestrated", "Scaled", "Deployed"],
+      "bulletTemplates": [
+        "Orchestrated container deployments with Kubernetes and Helm charts, implementing horizontal pod autoscaling (HPA) to smoothly absorb 300% traffic spikes."
+      ]
+    },
+    {
+      "id": "aws",
+      "name": "AWS (Amazon Web Services)",
+      "category": "Cloud & DevOps",
+      "aliases": ["aws", "amazon web services", "ec2", "s3", "lambda", "ecs", "rds", "cloudfront"],
+      "actionVerbs": ["Architected", "Provisioned", "Automated", "Cost-Optimized"],
+      "bulletTemplates": [
+        "Architected highly available serverless infrastructure on AWS using Lambda, API Gateway, S3, and DynamoDB, reducing cloud computing overhead by $15,000/year.",
+        "Automated AWS cloud provisioning with Infrastructure as Code (Terraform), achieving consistent, repeatable multi-region disaster recovery deployments."
+      ]
+    },
+    {
+      "id": "gcp",
+      "name": "Google Cloud Platform (GCP)",
+      "category": "Cloud & DevOps",
+      "aliases": ["gcp", "google cloud", "google cloud platform", "cloud run", "bigquery"],
+      "actionVerbs": ["Deployed", "Configured", "Integrated"],
+      "bulletTemplates": [
+        "Deployed containerized services to Google Cloud Run and integrated BigQuery for real-time streaming analytics on millions of telemetry events."
+      ]
+    },
+    {
+      "id": "cicd",
+      "name": "CI/CD & Automation",
+      "category": "Cloud & DevOps",
+      "aliases": ["ci/cd", "cicd", "continuous integration", "github actions", "gitlab ci", "jenkins"],
+      "actionVerbs": ["Automated", "Engineered", "Streamlined"],
+      "bulletTemplates": [
+        "Automated end-to-end CI/CD release pipelines via GitHub Actions with linting, unit tests, and security auditing, cutting production deployment time from 1 hour to 7 minutes."
+      ]
+    },
+    {
+      "id": "git",
+      "name": "Git & Version Control",
+      "category": "Tools",
+      "aliases": ["git", "github", "gitlab", "bitbucket", "version control"],
+      "actionVerbs": ["Managed", "Standardized", "Collaborated"],
+      "bulletTemplates": [
+        "Standardized Git branching strategies and trunk-based development workflows, facilitating smooth pull-request reviews for a 15-developer engineering team."
+      ]
+    },
+    {
+      "id": "graphql",
+      "name": "GraphQL",
+      "category": "Architecture",
+      "aliases": ["graphql", "apollo", "apollo client", "relay"],
+      "actionVerbs": ["Designed", "Implemented", "Consolidated"],
+      "bulletTemplates": [
+        "Designed unified GraphQL federation schemas to consolidate 6 disparate REST services, reducing client over-fetching by 55% and simplifying mobile client integrations."
+      ]
+    },
+    {
+      "id": "rest_api",
+      "name": "RESTful API Design",
+      "category": "Architecture",
+      "aliases": ["rest", "restful", "rest api", "apis", "api design", "openapi", "swagger"],
+      "actionVerbs": ["Architected", "Authored", "Standardized"],
+      "bulletTemplates": [
+        "Architected RESTful public APIs following OpenAPI 3.0 standards with automated Swagger documentation, adopted by 50+ enterprise third-party integrators."
+      ]
+    },
+    {
+      "id": "testing",
+      "name": "Unit & Integration Testing",
+      "category": "Testing",
+      "aliases": ["testing", "unit test", "unit tests", "integration tests", "jest", "vitest", "cypress", "playwright", "tdd"],
+      "actionVerbs": ["Implemented", "Authored", "Accelerated"],
+      "bulletTemplates": [
+        "Implemented comprehensive unit and end-to-end testing suites using Jest and Playwright, lifting automated test coverage from 40% to 88% and eliminating critical regressions."
+      ]
+    },
+    {
+      "id": "microservices",
+      "name": "Microservices & Distributed Systems",
+      "category": "Architecture",
+      "aliases": ["microservices", "distributed systems", "event-driven", "kafka", "rabbitmq"],
+      "actionVerbs": ["Decoupled", "Architected", "Engineered"],
+      "bulletTemplates": [
+        "Decoupled legacy monolithic application into event-driven microservices via RabbitMQ messaging, improving fault isolation and system resilience."
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Application Security & Auth",
+      "category": "Security",
+      "aliases": ["security", "oauth", "oauth2", "jwt", "saml", "sso", "authentication", "authorization", "rbac", "owasp"],
+      "actionVerbs": ["Hardened", "Engineered", "Implemented"],
+      "bulletTemplates": [
+        "Hardened application security by implementing OAuth2/OIDC single sign-on with multi-factor authentication (MFA) and strict role-based access control (RBAC)."
+      ]
+    },
+    {
+      "id": "agile",
+      "name": "Agile / Scrum Methodologies",
+      "category": "Methodologies",
+      "aliases": ["agile", "scrum", "kanban", "sprint planning", "jira"],
+      "actionVerbs": ["Facilitated", "Collaborated", "Championed"],
+      "bulletTemplates": [
+        "Collaborated in bi-weekly Agile/Scrum sprints, consistently meeting sprint delivery commitments and actively leading sprint retrospectives."
+      ]
+    },
+    {
+      "id": "ai_ml",
+      "name": "AI / Machine Learning / LLMs",
+      "category": "Data & AI",
+      "aliases": ["ai", "machine learning", "ml", "llm", "large language models", "generative ai", "langchain", "openai", "embeddings", "rag"],
+      "actionVerbs": ["Engineered", "Integrated", "Developed"],
+      "bulletTemplates": [
+        "Integrated Retrieval-Augmented Generation (RAG) pipelines with vector embeddings and LLMs, enabling semantic question-answering over 100,000+ proprietary documents with 92% retrieval accuracy."
+      ]
+    },
+    {
+      "id": "data_analysis",
+      "name": "Data Analysis & Pandas",
+      "category": "Data & AI",
+      "aliases": ["pandas", "numpy", "data analysis", "analytics", "tableau", "power bi"],
+      "actionVerbs": ["Analyzed", "Visualized", "Synthesized"],
+      "bulletTemplates": [
+        "Analyzed multi-gigabyte behavioral user datasets using Python (Pandas/NumPy), delivering data-backed insights that increased customer retention by 14%."
+      ]
+    },
+    {
+      "id": "mobile_dev",
+      "name": "Mobile App Development",
+      "category": "Mobile",
+      "aliases": ["react native", "flutter", "ios", "android", "swift", "kotlin", "mobile app"],
+      "actionVerbs": ["Engineered", "Published", "Optimized"],
+      "bulletTemplates": [
+        "Engineered cross-platform mobile applications in React Native for iOS and Android, achieving a 4.8-star app store rating and over 50,000 downloads."
+      ]
+    }
+  ]
+}
